@@ -19,6 +19,7 @@ public class LoginController {
 	public String login(Model model) {
 		model.addAttribute("title", "Login");
 		model.addAttribute("formlogin", new FormLogin());
+		model.addAttribute("visualizar", false);
 		return "login";
 	}
 	
@@ -30,6 +31,8 @@ public class LoginController {
 			model.addAttribute("mensaje", "Bienvenido "+ objFormLogin.getUsuario());
 			return "home";
 		}
+		model.addAttribute("visualizar", true);
+		model.addAttribute("mensajeerror", "Usuario o password incorrecto");
 		return "login";
 	}
 	

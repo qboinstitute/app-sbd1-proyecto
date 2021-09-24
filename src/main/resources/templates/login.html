@@ -17,19 +17,25 @@
 					<div class="card-header bg-primary text-white text-center">
 						AUTENTICACIÓN</div>
 					<div class="card-body">
-					<form th:action="@{/login}" method="post" th:object="${formlogin}">
-						<div class="mb-3">
-							<label for="txtusuario" class="form-label">Usuario </label> <input
-								type="text" class="form-control" id="txtusuario"
-								placeholder="A001" th:field="*{usuario}" >
-						</div>
-						<div class="mb-3">
-							<label for="txtpassword" class="form-label">Password </label> <input
-								type="password" class="form-control" id="txtpassword"
-								th:field="*{password}">
-						</div>
-						<button type="submit" class="btn btn-primary">Ingresar</button>					
-					</form>
+						<form th:action="@{/login}" method="post" th:object="${formlogin}">
+							<div class="mb-3">
+								<label for="txtusuario" class="form-label">Usuario </label> <input
+									type="text" class="form-control" id="txtusuario"
+									placeholder="A001" th:field="*{usuario}">
+							</div>
+							<div class="mb-3">
+								<label for="txtpassword" class="form-label">Password </label> <input
+									type="password" class="form-control" id="txtpassword"
+									th:field="*{password}">
+							</div>
+							<div class="text-center">
+								<button type="submit" class="btn btn-primary">Ingresar</button>
+							</div>
+							<div th:if="${visualizar}" class="alert alert-danger" role="alert">
+								<span th:text="${mensajeerror} ?: ''"></span>
+							</div>
+
+						</form>
 
 					</div>
 				</div>
