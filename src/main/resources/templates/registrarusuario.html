@@ -18,7 +18,7 @@
 					<div class="card-header bg-primary text-white text-center">
 						REGISTRO DE USUARIO</div>
 					<div class="card-body">
-						<form th:action="@{/registrar}" method="post"
+						<form id="formregistro" th:action="@{/registrar}" method="post"
 							th:object="${usuario}">
 							<div class="mb-3">
 								<label for="txtnombres" class="form-label">Nombres </label> <input
@@ -45,7 +45,7 @@
 									class="text-danger"></span>
 							</div>
 							<div class="text-center">
-								<button type="submit" class="btn btn-primary">Registrar
+								<button id="btnregistrar" type="button" class="btn btn-primary">Registrar
 									Usuario</button>
 							</div>
 							<div class="text-center">
