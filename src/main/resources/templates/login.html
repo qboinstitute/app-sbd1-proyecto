@@ -36,7 +36,7 @@
 								<button id="btnlogin" type="button" class="btn btn-primary">Ingresar</button>
 							</div>
 							<div class="text-center">
-								No tienes cuenta registrate <a href="#">aquí</a>
+								No tienes cuenta registrate <a th:href="@{/registrar}">aquí</a>
 							</div>							
 							<div th:if="${visualizar}" class="alert alert-danger" role="alert">
 								<span th:text="${mensajeerror} ?: ''"></span>
