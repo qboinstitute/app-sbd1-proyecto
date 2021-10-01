@@ -4,13 +4,14 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
+<script type="text/javascript" th:src="@{/js/jsweb/Curso/frmMantCurso.js}"></script>
 <body>
 	<nav th:replace="layout::menu"></nav>
 	<div class="card">
 		<div class="card-header">Manteniento de cursos:</div>
 		<div class="card-body">
-			<button type="button" id="btnagregarcurso" class="btn btn-success">Agregar
-				Curso</button>
+			<button type="button" id="btnagregarcurso" class="btn btn-success">
+			<i class="bi bi-plus-circle"></i> Agregar Curso</button>
 			<table class="table table-hover">
 				<thead>
 					<tr>
@@ -30,12 +31,12 @@
 							<button type="button" class="btn btn-primary btnactualizarcurso"
 								th:data-codcurso="${curso.idcurso}"
 								th:data-nomcurso="${curso.nomcurso}"
-								th:data-credcurso="${curso.credito}">Actualizar</button>
+								th:data-credcurso="${curso.credito}"><i class="bi bi-pencil-square"></i></button>
 						</td>
 						<td>
 							<button type="button" class="btn btn-danger btneliminarcurso"
 								th:data-codcurso="${curso.idcurso}"
-								th:data-nomcurso="${curso.nomcurso}">Eliminar</button>
+								th:data-nomcurso="${curso.nomcurso}"><i class="bi bi-trash"></i></button>
 						</td>
 
 					</tr>
@@ -44,7 +45,7 @@
 		</div>
 	</div>
 	<!-- Modal Nuevo Curso -->
-	<div class="modal fade" id="exampleModal" tabindex="-1"
+	<div class="modal fade" id="modalcurso" tabindex="-1"
 		aria-labelledby="exampleModalLabel" aria-hidden="true">
 		<div class="modal-dialog">
 			<div class="modal-content">
@@ -76,7 +77,7 @@
 		</div>
 	</div>
 	<!-- Modal Eliminar Curso -->
-	<div class="modal fade" id="exampleModal" tabindex="-1"
+	<div class="modal fade" id="modaleliminarcurso" tabindex="-1"
 		aria-labelledby="exampleModalLabel" aria-hidden="true">
 		<div class="modal-dialog">
 			<div class="modal-content">
