@@ -19,7 +19,7 @@ public class CursoService {
 	}
 	
 	public void registrarCurso(Curso curso) {
-		if(curso.getIdcurso() == null) {
+		if(curso.getIdcurso().equals("0")) {
 			cursoRepository.registrarCurso(curso.getNomcurso(), curso.getCredito());
 		}else {
 			cursoRepository.save(curso);

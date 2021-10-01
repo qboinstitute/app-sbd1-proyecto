@@ -2,7 +2,7 @@
 <html xmlns="http://www.thymeleaf.org">
 <head th:replace="layout::head">
 <meta charset="UTF-8">
-<title>Insert title here</title>
+
 </head>
 <script type="text/javascript" th:src="@{/js/jsweb/Curso/frmMantCurso.js}"></script>
 <body>
@@ -12,7 +12,8 @@
 		<div class="card-body">
 			<button type="button" id="btnagregarcurso" class="btn btn-success">
 			<i class="bi bi-plus-circle"></i> Agregar Curso</button>
-			<table class="table table-hover">
+			<div id="mensaje"></div>
+			<table id="tblcurso" class="table table-hover">
 				<thead>
 					<tr>
 						<th scope="col">Id</th>
@@ -67,11 +68,12 @@
 							id="txtcredcurso" maxlength="2"> <span id="errorcredcurso"
 							class="text-danger"></span>
 					</div>
+					<input type="hidden" id="hddidcurso" value="0">
 				</div>
 				<div class="modal-footer">
 					<button type="button" class="btn btn-secondary"
 						data-bs-dismiss="modal">Cerrar</button>
-					<button type="button" class="btn btn-primary">Guardar</button>
+					<button type="button" id="btnregistrarcurso" class="btn btn-primary">Guardar</button>
 				</div>
 			</div>
 		</div>
@@ -82,15 +84,18 @@
 		<div class="modal-dialog">
 			<div class="modal-content">
 				<div class="modal-header">
-					<h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+					<h5 class="modal-title" id="exampleModalLabel">Eliminar curso</h5>
 					<button type="button" class="btn-close" data-bs-dismiss="modal"
 						aria-label="Close"></button>
 				</div>
-				<div class="modal-body">...</div>
+				<div class="modal-body">
+					<label id="mensajeeliminar"></label>
+					<input id="hddidcursoeliminar" type="hidden" value="0" >
+				</div>
 				<div class="modal-footer">
 					<button type="button" class="btn btn-secondary"
-						data-bs-dismiss="modal">Close</button>
-					<button type="button" class="btn btn-primary">Save changes</button>
+						data-bs-dismiss="modal">Cerrar</button>
+					<button id="btneliminarcurso" type="button" class="btn btn-danger">Eliminar</button>
 				</div>
 			</div>
 		</div>
