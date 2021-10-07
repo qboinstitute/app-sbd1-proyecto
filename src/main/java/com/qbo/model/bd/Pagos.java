@@ -7,10 +7,7 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.IdClass;
 import javax.persistence.Table;
-
-import com.qbo.model.bd.pk.NotasId;
 import com.qbo.model.bd.pk.PagosId;
-
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -27,7 +24,7 @@ public class Pagos {
 	@Id
 	private String ciclo;
 	@Id
-	private String ncuota;
+	private Integer ncuota;
 	
 	@Column(name = "monto")
 	private Double monto;
