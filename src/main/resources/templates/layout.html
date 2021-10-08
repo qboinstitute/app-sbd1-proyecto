@@ -43,8 +43,8 @@
 								th:href="@{/Alumno/frmListAlumno}">Notas x Alumno</a></li>
 						</ul></li>
 				</ul>
-				<form class="d-flex">
-					<button class="btn btn-outline-success" type="submit">Search</button>
+				<form th:action="@{/logout}" method="post" class="d-flex">
+					<button class="btn btn-outline-light" type="submit">Cerrar Sesión</button>
 				</form>
 			</div>
 		</div>
