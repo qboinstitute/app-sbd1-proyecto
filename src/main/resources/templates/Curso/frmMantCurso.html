@@ -5,6 +5,8 @@
 
 </head>
 <script type="text/javascript" th:src="@{/js/jsweb/Curso/frmMantCurso.js}"></script>
+<link rel="stylesheet" th:href="@{/css/bootstrap-table/bootstrap-table.css}">
+<script type="text/javascript" th:src="@{/js/bootstrap-table/bootstrap-table.js}"></script>
 <body>
 	<nav th:replace="layout::menu"></nav>
 	<div class="card">
@@ -13,7 +15,8 @@
 			<button type="button" id="btnagregarcurso" class="btn btn-success">
 			<i class="bi bi-plus-circle"></i> Agregar Curso</button>
 			<div id="mensaje"></div>
-			<table id="tblcurso" class="table table-hover">
+			<table id="tblcurso" class="table table-hover"
+			  data-toggle="table" data-pagination="true">
 				<thead>
 					<tr>
 						<th scope="col">Id</th>
