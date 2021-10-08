@@ -7,11 +7,12 @@
 <script type="text/javascript"
 	th:src="@{/js/bootstrap/bootstrap.bundle.js}"></script>
 <link th:href="@{/css/bootstrap/bootstrap.css}" rel="stylesheet">
-<link th:href="@{/icons/bootstrap-icons/bootstrap-icons.css}" rel="stylesheet">
+<link th:href="@{/icons/bootstrap-icons/bootstrap-icons.css}"
+	rel="stylesheet">
 </head>
 <body>
-	<nav th:fragment="menu" 
-	class="navbar navbar-expand-lg navbar-dark bg-dark">
+	<nav th:fragment="menu"
+		class="navbar navbar-expand-lg navbar-dark bg-dark">
 		<div class="container-fluid">
 			<a class="navbar-brand" href="#">AppQBO</a>
 			<button class="navbar-toggler" type="button"
@@ -29,8 +30,18 @@
 						role="button" data-bs-toggle="dropdown" aria-expanded="false">
 							Curso </a>
 						<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-							<li><a class="dropdown-item" th:href="@{/Curso/frmMantCurso}">Mantenimiento</a></li>							
-						</ul></li>					
+							<li><a class="dropdown-item"
+								th:href="@{/Curso/frmMantCurso}">Mantenimiento</a></li>
+						</ul></li>
+					
+					<li class="nav-item dropdown"><a
+						class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+						role="button" data-bs-toggle="dropdown" aria-expanded="false">
+							Alumno </a>
+						<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<li><a class="dropdown-item"
+								th:href="@{/Alumno/frmListAlumno}">Notas x Alumno</a></li>
+						</ul></li>
 				</ul>
 				<form class="d-flex">
 					<button class="btn btn-outline-success" type="submit">Search</button>
